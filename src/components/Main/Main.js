@@ -8,7 +8,7 @@ const Main = (props) => {
   );
 
   return (
-    <div className="w-full h-[100vh] lg:bg-gradient-to-b lg:from-primaryPurple lg:to-secondaryPurple">
+    <div className="w-full h-full lg:bg-gradient-to-b lg:from-primaryPurple lg:to-secondaryPurple">
       <Navbar />
       {isShowModalNavbar && <ModalNavbar />}
     </div>
