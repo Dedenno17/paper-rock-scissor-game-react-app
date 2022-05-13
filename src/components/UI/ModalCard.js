@@ -8,7 +8,7 @@ const ModalBackground = (props) => {
 };
 
 const ModalContent = (props) => {
-  const classes = `${props.className} fixed w-3/4 top-5 left-1/2 -translate-x-1/2 bg-slate-200 rounded-lg shadow-lg z-30`;
+  const classes = `${props.className} fixed w-3/4 opacity-0 -top-10 left-1/2 -translate-x-1/2 bg-slate-200 rounded-lg shadow-lg z-30`;
 
   return <div className={classes}>{props.children}</div>;
 };
