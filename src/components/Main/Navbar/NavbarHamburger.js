@@ -14,9 +14,9 @@ const NavbarHamburger = (props) => {
       className="w-10 h-10 flex flex-col justify-around cursor-pointer lg:hidden"
       onClick={showModalNavbarHandler}
     >
-      <span className="block w-full h-[20%] bg-white"></span>
-      <span className="block w-full h-[20%] bg-white"></span>
-      <span className="block w-full h-[20%] bg-white"></span>
+      <span className="block w-full h-[10%] bg-white"></span>
+      <span className="block w-full h-[10%] bg-white"></span>
+      <span className="block w-full h-[10%] bg-white"></span>
     </div>
   );
 };
