@@ -8,7 +8,7 @@ const ModalBackground = (props) => {
 };
 
 const ModalContent = (props) => {
-  const classes = `${props.className} fixed top-5 left-1/2 -translate-1/2 bg-slate-200 rounded-lg shadow-lg z-30`;
+  const classes = `${props.className} fixed w-3/4 top-5 left-1/2 -translate-x-1/2 bg-slate-200 rounded-lg shadow-lg z-30`;
 
   return <div className={classes}>{props.children}</div>;
 };
@@ -18,7 +18,12 @@ const modal = document.getElementById("modal");
 const ModalCard = (props) => {
   return (
     <React.Fragment>
-      {(createPortal(<ModalContent className={props.className} />), modal)}
+      {createPortal(
+        <ModalContent className={props.className}>
+          {props.children}
+        </ModalContent>,
+        modal
+      )}
       {createPortal(<ModalBackground />, modal)}
     </React.Fragment>
   );
