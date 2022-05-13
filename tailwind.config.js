@@ -6,7 +6,7 @@ module.exports = {
         goSlowDown: "goSlowDown .5s ease-in-out forwards",
       },
       colors: {
-        primaryPueple: "#080e67",
+        primaryPurple: "#080e67",
         secondaryPurple: "#060a47",
       },
       keyframes: {

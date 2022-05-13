@@ -10,17 +10,17 @@ const ModalNavbar = (props) => {
   };
 
   return (
-    <ModalCard className="p-4 w-full relative animate-goSlowDown">
+    <ModalCard className="p-4 w-3/4 relative animate-goSlowDown">
       <span
         className="flex justify-center items-center absolute -top-3 -right-3 w-10 h-10 rounded-full bg-red-500 text-white font-semibold cursor-pointer"
         onClick={hideModalNavbarHandler}
       >
         X
       </span>
-      <button className="w-full border-b-2 border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
+      <button className="w-full border-b-[1px] border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
         Help
       </button>
-      <button className="w-full border-b-2 border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
+      <button className="w-full border-b-[1px] border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
         Reset
       </button>
       <button className="w-full py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
