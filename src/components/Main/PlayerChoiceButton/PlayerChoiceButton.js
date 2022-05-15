@@ -10,7 +10,9 @@ const PlayerChoiceButton = (props) => {
       </h1>
       <div className="w-full flex justify-evenly">
         {choices.map((item) => (
-          <Button type="button">{item}</Button>
+          <Button type="button" key={item}>
+            {item}
+          </Button>
         ))}
       </div>
     </div>
