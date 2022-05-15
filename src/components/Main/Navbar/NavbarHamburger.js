@@ -11,7 +11,7 @@ const NavbarHamburger = (props) => {
 
   return (
     <div
-      className="w-10 h-10 flex flex-col justify-around cursor-pointer lg:hidden"
+      className="w-6 h-6 flex flex-col justify-around cursor-pointer lg:hidden"
       onClick={showModalNavbarHandler}
     >
       <span className="block rounded-md w-full h-[10%] bg-white"></span>
