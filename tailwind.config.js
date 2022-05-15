@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         primaryPurple: "#080e67",
         secondaryPurple: "#060a47",
+        ternaryPurple: "#6366b9",
       },
       keyframes: {
         goSlowDown: {
