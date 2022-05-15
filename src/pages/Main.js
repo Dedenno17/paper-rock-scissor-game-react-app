@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import ModalNavbar from "./Navbar/ModalNavbar";
-import Navbar from "./Navbar/Navbar";
-import Scores from "./Scores/Scores";
+import ModalNavbar from "../components/Main/Navbar/ModalNavbar";
+import Navbar from "../components/Main/Navbar/Navbar";
+import Scores from "../components/Main/Scores/Scores";
 
 const Main = (props) => {
   const isShowModalNavbar = useSelector(
