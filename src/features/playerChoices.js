@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialStateValue = { choices: "", hasClick: false };
+const initialStateValue = { choices: "" };
 
 export const playerChoicesSlice = createSlice({
   name: "playerChoices",
@@ -8,7 +8,6 @@ export const playerChoicesSlice = createSlice({
   reducers: {
     setPlayerChoices: (state, action) => {
       state.choices = action.payload;
-      state.hasClick = true;
     },
   },
 });
