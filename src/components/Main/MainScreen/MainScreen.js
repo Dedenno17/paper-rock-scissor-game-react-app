@@ -4,6 +4,7 @@ import MainScreenImg from "./MainScreenImg";
 const MainScreen = (props) => {
   const playerChoices = useSelector((state) => state.playerChoices.choices);
   const compChoices = useSelector((state) => state.computerChoices.choices);
+  const result = useSelector((state) => state.result.result);
 
   return (
     <div className="w-fullbg-slate-200 py-4 lg:bg-transparent">
@@ -17,7 +18,7 @@ const MainScreen = (props) => {
       </div>
       <MainScreenImg />
       <h2 className="text-center text-2xl font-semibold lg:text-slate-200 lg:hidden">
-        You Win!
+        {result}
       </h2>
     </div>
   );

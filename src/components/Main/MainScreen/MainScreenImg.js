@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { resultActions } from "../../../features/result";
 
 const MainScreenImg = (props) => {
   const playerChoices = useSelector((state) => state.playerChoices.choices);
@@ -8,13 +9,26 @@ const MainScreenImg = (props) => {
   const compChoices = useSelector((state) => state.computerChoices.choices);
   const compChoicesImg = useSelector((state) => state.computerChoices.img);
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (!playerChoices && !compChoices) {
       return;
     }
-    console.log(playerChoices);
-    console.log(compChoices);
-  }, [playerChoices, compChoices]);
+
+    const timeout = setTimeout(() => {
+      dispatch(
+        resultActions.getTheWinner({
+          player: playerChoices,
+          comp: compChoices,
+        })
+      );
+    }, 300);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [playerChoices, compChoices, dispatch]);
 
   return (
     <div className="flex w-full items-center justify-around h-40">
