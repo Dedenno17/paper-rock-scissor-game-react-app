@@ -12,7 +12,7 @@ module.exports = {
       },
       keyframes: {
         goSlowDown: {
-          "100%": { top: "20px", opacity: 1 },
+          "100%": { top: "30px", opacity: 1 },
         },
       },
     },

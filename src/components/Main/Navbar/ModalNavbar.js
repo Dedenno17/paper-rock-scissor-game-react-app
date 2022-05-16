@@ -10,7 +10,7 @@ const ModalNavbar = (props) => {
   };
 
   return (
-    <ModalCard className="p-4 w-3/4 relative animate-goSlowDown">
+    <ModalCard className="p-4 w-3/4">
       <span
         className="flex justify-center items-center absolute -top-3 -right-3 w-10 h-10 rounded-full bg-red-500 text-white font-semibold cursor-pointer"
         onClick={hideModalNavbarHandler}

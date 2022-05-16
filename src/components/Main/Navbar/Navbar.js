@@ -5,7 +5,7 @@ import reset from "../../../assets/images/rotate-solid.svg";
 
 const Navbar = (props) => {
   return (
-    <div className="w-full py-3 px-6 bg-gradient-to-b from-primaryPurple to-secondaryPurple flex justify-end items:center lg:bg-gradient-to-b lg:from-transparent lg:to-transparent lg:bg-[rgba(0,0,0,.2)]">
+    <div className="w-full py-3 px-6 bg-gradient-to-b from-primaryPurple to-secondaryPurple flex justify-end items:center lg:bg-gradient-to-b lg:from-transparent lg:to-transparent lg:bg-[rgba(0,0,0,.2)] fixed top-0 left-0">
       <ul className="hidden w-1/4 lg:flex lg:items-center lg:justify-center">
         <li className="inline-block mr-8 cursor-pointer">
           <img
