@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialStateValue = { choices: "" };
+//images
+import paper from "../assets/images/comp-paper.png";
+import rock from "../assets/images/comp-rock.png";
+import scissor from "../assets/images/comp-scissors.png";
+
+const images = { paper: paper, rock: rock, scissor: scissor };
+
+const initialStateValue = { choices: "", img: rock };
 
 export const computerChoicesSlice = createSlice({
   name: "computerChoices",
@@ -10,14 +17,17 @@ export const computerChoicesSlice = createSlice({
       const random = Math.round(Math.random() * (6 - 1));
       if (random >= 1 && random < 3) {
         state.choices = "paper";
+        state.img = images[state.choices];
       }
 
       if (random >= 3 && random < 5) {
         state.choices = "rock";
+        state.img = images[state.choices];
       }
 
       if (random >= 5 && random < 7) {
         state.choices = "scissor";
+        state.img = images[state.choices];
       }
     },
   },

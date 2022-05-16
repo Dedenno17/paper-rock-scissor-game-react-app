@@ -9,8 +9,10 @@ const PlayerChoiceButton = (props) => {
   const dispatch = useDispatch();
 
   const chooseHandler = (pChoices) => {
-    dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
-    dispatch(compChoicesActions.setCompChoices());
+    setTimeout(() => {
+      dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
+      dispatch(compChoicesActions.setCompChoices());
+    }, 700);
   };
 
   return (

@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-import playerChoiceImg from "../../../assets/images/player-rock.png";
-import computerChoice from "../../../assets/images/comp-rock.png";
-
 const MainScreenImg = (props) => {
   const playerChoices = useSelector((state) => state.playerChoices.choices);
+  const playerChoicesImg = useSelector((state) => state.playerChoices.img);
+
   const compChoices = useSelector((state) => state.computerChoices.choices);
-  const hasClick = useSelector((state) => state.playerChoices.hasClick);
+  const compChoicesImg = useSelector((state) => state.computerChoices.img);
 
   useEffect(() => {
     if (!playerChoices && !compChoices) {
@@ -15,17 +14,17 @@ const MainScreenImg = (props) => {
     }
     console.log(playerChoices);
     console.log(compChoices);
-  }, [playerChoices, compChoices, hasClick]);
+  }, [playerChoices, compChoices]);
 
   return (
     <div className="flex w-full items-center justify-around">
       <img
-        src={playerChoiceImg}
+        src={playerChoicesImg}
         alt="Player choice"
         className="w-[35%] md:w-[25%]"
       />
       <img
-        src={computerChoice}
+        src={compChoicesImg}
         alt="Computer choice"
         className="w-[35%] md:w-[25%]"
       />
