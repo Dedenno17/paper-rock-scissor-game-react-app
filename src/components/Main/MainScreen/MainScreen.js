@@ -6,7 +6,7 @@ const MainScreen = (props) => {
   const compChoices = useSelector((state) => state.computerChoices.choices);
 
   return (
-    <div className="w-full bg-slate-200 py-4 lg:bg-transparent">
+    <div className="w-fullbg-slate-200 py-4 lg:bg-transparent">
       <div className="flex items-center justify-around">
         <p className="text-sm text-slate-800 lg:text-slate-200 lg:text-2xl">
           You Played {playerChoices}

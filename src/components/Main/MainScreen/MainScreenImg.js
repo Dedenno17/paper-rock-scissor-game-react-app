@@ -17,7 +17,7 @@ const MainScreenImg = (props) => {
   }, [playerChoices, compChoices]);
 
   return (
-    <div className="flex w-full items-center justify-around">
+    <div className="flex w-full items-center justify-around h-40">
       <img
         src={playerChoicesImg}
         alt="Player choice"
