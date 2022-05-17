@@ -17,9 +17,19 @@ const MainScreen = (props) => {
         </p>
       </div>
       <MainScreenImg />
-      <h2 className="text-center text-2xl font-semibold lg:text-slate-200 lg:hidden">
-        {result}
-      </h2>
+      <div className="w-full">
+        <h2
+          className={`text-center text-2xl font-semibold lg:text-slate-200 lg:hidden ${
+            result.includes("Player")
+              ? "text-green-500"
+              : result.includes("Computer")
+              ? "text-red-500"
+              : "text-orange-400"
+          }`}
+        >
+          {result}
+        </h2>
+      </div>
     </div>
   );
 };
