@@ -9,6 +9,8 @@ const MainScreenImg = (props) => {
   const compChoices = useSelector((state) => state.computerChoices.choices);
   const compChoicesImg = useSelector((state) => state.computerChoices.img);
 
+  const wasChoose = useSelector((state) => state.wasChoose.wasChoose);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,10 +27,12 @@ const MainScreenImg = (props) => {
       );
     }, 300);
 
+    console.log(wasChoose, "from mainscreenIMg");
+
     return () => {
       clearTimeout(timeout);
     };
-  }, [playerChoices, compChoices, dispatch]);
+  }, [wasChoose, playerChoices, compChoices, dispatch]);
 
   return (
     <div className="flex w-full items-center justify-around h-40">

@@ -7,6 +7,7 @@ import computerChoicesReducer from "../features/computerChoices";
 import playerScoreReducer from "../features/playerScore";
 import computerScoreReducer from "../features/computerScore";
 import resultReducer from "../features/result";
+import wasChooseReducer from "../features/wasChoose";
 
 export const store = configureStore({
   reducer: {
@@ -16,5 +17,6 @@ export const store = configureStore({
     playerScore: playerScoreReducer,
     result: resultReducer,
     showModalNavbar: showModalNavbarReducer,
+    wasChoose: wasChooseReducer,
   },
 });

@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { compChoicesActions } from "../../../features/computerChoices";
 import { playerChoicesActions } from "../../../features/playerChoices";
+import { chooseActions } from "../../../features/wasChoose";
 import Button from "../../UI/Button";
 
 const choices = ["Paper", "Rock", "Scissor"];
@@ -9,9 +10,12 @@ const PlayerChoiceButton = (props) => {
   const dispatch = useDispatch();
 
   const chooseHandler = (pChoices) => {
-    setTimeout(() => {
+    dispatch(chooseActions.increase());
+
+    const timeout = setTimeout(() => {
       dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
       dispatch(compChoicesActions.setCompChoices());
+      clearTimeout(timeout);
     }, 700);
   };
 

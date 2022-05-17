@@ -2,7 +2,7 @@ import HistoryRow from "./HistoryRow";
 
 const History = (props) => {
   return (
-    <div className="w-full bg-slate-200 py-3 px-4">
+    <div className="w-full bg-slate-200 px-4">
       <table className="m-auto w-full text-sm">
         <thead>
           <tr>
