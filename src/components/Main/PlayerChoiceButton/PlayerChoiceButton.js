@@ -10,13 +10,14 @@ const PlayerChoiceButton = (props) => {
   const dispatch = useDispatch();
 
   const chooseHandler = (pChoices) => {
-    dispatch(chooseActions.increase());
-
     const timeout = setTimeout(() => {
+      dispatch(chooseActions.toggle());
       dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
       dispatch(compChoicesActions.setCompChoices());
       clearTimeout(timeout);
     }, 700);
+
+    console.log("hasclick");
   };
 
   return (

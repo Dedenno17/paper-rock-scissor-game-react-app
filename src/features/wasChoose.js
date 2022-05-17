@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialStateValue = { wasChoose: 0 };
+const initialStateValue = { wasChoose: false };
 
 export const chooseSlice = createSlice({
   name: "choose",
   initialState: initialStateValue,
   reducers: {
-    increase: (state) => {
-      state.wasChoose += 1;
+    toggle: (state) => {
+      state.wasChoose = !state.wasChoose;
     },
   },
 });

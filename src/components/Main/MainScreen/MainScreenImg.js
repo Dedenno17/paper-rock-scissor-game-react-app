@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { resultActions } from "../../../features/result";
+import { chooseActions } from "../../../features/wasChoose";
 
 const MainScreenImg = (props) => {
   const playerChoices = useSelector((state) => state.playerChoices.choices);
@@ -15,24 +16,29 @@ const MainScreenImg = (props) => {
 
   useEffect(() => {
     if (!playerChoices && !compChoices) {
+      // console.log("its wrong way!");
       return;
     }
 
-    const timeout = setTimeout(() => {
-      dispatch(
-        resultActions.getTheWinner({
-          player: playerChoices,
-          comp: compChoices,
-        })
-      );
-    }, 300);
+    if (wasChoose) {
+      const timeout = setTimeout(() => {
+        dispatch(
+          resultActions.getTheWinner({
+            player: playerChoices,
+            comp: compChoices,
+          })
+        );
+        dispatch(chooseActions.toggle());
+        clearTimeout(timeout);
+      }, 300);
+      console.log(wasChoose, "from mainscreenIMg");
+    }
 
-    console.log(wasChoose, "from mainscreenIMg");
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [wasChoose, playerChoices, compChoices, dispatch]);
+    // return () => {
+    //   clearTimeout(timeout);
+    // };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playerChoices, compChoices, wasChoose, dispatch]);
 
   return (
     <div className="flex w-full items-center justify-around h-40">
