@@ -16,13 +16,15 @@ const PlayerChoiceButton = (props) => {
   );
 
   const chooseHandler = (pChoices) => {
+    dispatch(playerChoicesActions.resetChoice());
+    dispatch(compChoicesActions.resetChoice());
     dispatch(randomImgTimeActions.setRandomImgTime(true));
 
     const timeout = setTimeout(() => {
-      dispatch(chooseActions.toggle());
       dispatch(randomImgTimeActions.setRandomImgTime(false));
       console.log("firsttimeout");
       const secondTimeout = setTimeout(() => {
+        dispatch(chooseActions.toggle());
         dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
         dispatch(compChoicesActions.setCompChoices());
         console.log("secontimeout");

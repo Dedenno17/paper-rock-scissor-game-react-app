@@ -30,6 +30,10 @@ export const computerChoicesSlice = createSlice({
         state.img = images[state.choices];
       }
     },
+    resetChoice: (state) => {
+      state.choices = initialStateValue.choices;
+      state.img = initialStateValue.img;
+    },
   },
 });
 

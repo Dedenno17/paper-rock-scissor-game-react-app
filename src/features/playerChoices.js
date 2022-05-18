@@ -17,6 +17,10 @@ export const playerChoicesSlice = createSlice({
       state.choices = action.payload;
       state.img = images[action.payload];
     },
+    resetChoice: (state) => {
+      state.choices = initialStateValue.choices;
+      state.img = initialStateValue.img;
+    },
   },
 });
 
