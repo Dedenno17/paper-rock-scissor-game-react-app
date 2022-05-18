@@ -9,11 +9,13 @@ import computerScoreReducer from "../features/computerScore";
 import resultReducer from "../features/result";
 import wasChooseReducer from "../features/wasChoose";
 import randomImgTimeReducer from "../features/randomImgTime";
+import historyReducer from "../features/history";
 
 export const store = configureStore({
   reducer: {
     computerChoices: computerChoicesReducer,
     computerScore: computerScoreReducer,
+    history: historyReducer,
     playerChoices: playerChoicesReducer,
     playerScore: playerScoreReducer,
     randomImgTime: randomImgTimeReducer,

@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { compChoicesActions } from "../../../features/computerChoices";
 import { playerChoicesActions } from "../../../features/playerChoices";
@@ -11,10 +11,6 @@ const choices = ["Paper", "Rock", "Scissor"];
 const PlayerChoiceButton = (props) => {
   const dispatch = useDispatch();
 
-  const isRandomImgTime = useSelector(
-    (state) => state.randomImgTime.isRandomImgTime
-  );
-
   const chooseHandler = (pChoices) => {
     dispatch(playerChoicesActions.resetChoice());
     dispatch(compChoicesActions.resetChoice());
@@ -22,19 +18,15 @@ const PlayerChoiceButton = (props) => {
 
     const timeout = setTimeout(() => {
       dispatch(randomImgTimeActions.setRandomImgTime(false));
-      console.log("firsttimeout");
       const secondTimeout = setTimeout(() => {
         dispatch(chooseActions.toggle());
         dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
         dispatch(compChoicesActions.setCompChoices());
-        console.log("secontimeout");
         clearTimeout(secondTimeout);
       }, 200);
       clearTimeout(timeout);
     }, 1500);
   };
-
-  console.log("randomImgTime is " + isRandomImgTime);
 
   return (
     <div className="w-full bg-slate-200 flex flex-col items-center pt-2 lg:bg-secondaryPurple lg:py-5">

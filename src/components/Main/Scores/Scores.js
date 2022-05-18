@@ -21,8 +21,6 @@ const Scores = (props) => {
     } else if (result.includes("Computer")) {
       dispatch(computerScoreActions.increaseScore());
     }
-
-    console.log(result);
   }, [result, wasChoose, dispatch]);
 
   return (
