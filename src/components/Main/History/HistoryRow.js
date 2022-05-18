@@ -2,13 +2,13 @@ const HistoryRow = (props) => {
   return (
     <tr>
       <td className="text-slate-800 border-slate-700 border-[1px] text-center">
-        paper
+        {props.player}
       </td>
       <td className="text-slate-800 border-slate-700 border-[1px] text-center">
-        rock
+        {props.computer}
       </td>
       <td className="text-slate-800 border-slate-700 border-[1px] text-center">
-        computer win
+        {props.result}
       </td>
     </tr>
   );
