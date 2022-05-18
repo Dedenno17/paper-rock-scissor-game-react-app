@@ -11,32 +11,26 @@ const MainScreenImg = (props) => {
   const compChoicesImg = useSelector((state) => state.computerChoices.img);
 
   const wasChoose = useSelector((state) => state.wasChoose.wasChoose);
+  const isRandomImgTime = useSelector(
+    (state) => state.randomImgTime.isRandomImgTime
+  );
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (!playerChoices && !compChoices) {
-      // console.log("its wrong way!");
       return;
     }
 
     if (wasChoose) {
-      const timeout = setTimeout(() => {
-        dispatch(
-          resultActions.getTheWinner({
-            player: playerChoices,
-            comp: compChoices,
-          })
-        );
-        dispatch(chooseActions.toggle());
-        clearTimeout(timeout);
-      }, 300);
-      console.log(wasChoose, "from mainscreenIMg");
+      dispatch(
+        resultActions.getTheWinner({
+          player: playerChoices,
+          comp: compChoices,
+        })
+      );
+      dispatch(chooseActions.toggle());
     }
-
-    // return () => {
-    //   clearTimeout(timeout);
-    // };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerChoices, compChoices, wasChoose, dispatch]);
 
@@ -45,12 +39,16 @@ const MainScreenImg = (props) => {
       <img
         src={playerChoicesImg}
         alt="Player choice"
-        className="w-[35%] md:w-[25%]"
+        className={`w-[35%] md:w-[25%] ${
+          isRandomImgTime ? "animate-bounceSide" : ""
+        }`}
       />
       <img
         src={compChoicesImg}
         alt="Computer choice"
-        className="w-[35%] md:w-[25%]"
+        className={`w-[35%] md:w-[25%] ${
+          isRandomImgTime ? "animate-bounceOppositeSide" : ""
+        }`}
       />
     </div>
   );
