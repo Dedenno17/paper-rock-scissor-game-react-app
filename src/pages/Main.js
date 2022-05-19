@@ -13,7 +13,7 @@ const Main = (props) => {
   );
 
   return (
-    <div className="w-full h-[100vh] bg-slate-200 lg:bg-gradient-to-b lg:from-primaryPurple lg:to-secondaryPurple">
+    <div className="w-full bg-primaryPurple lg:pb-5 lg:bg-gradient-to-b lg:from-primaryPurple lg:to-secondaryPurple">
       <Navbar />
       <Scores />
       <main className="flex flex-col lg:flex-col-reverse">

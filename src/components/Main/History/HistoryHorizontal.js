@@ -14,7 +14,7 @@ const HistoryHorizontal = (props) => {
           Computer
         </p>
       </div>
-      <div className="w-[80%] border-l-2 bg-slate-200 border-l-slate-800 flex flex-wrap items-stretch justify-start overflow-x-scroll">
+      <div className="w-[80%] border-l-2 bg-slate-200 border-l-slate-800 space-nowrap overflow-x-auto">
         {history.map((item, i) => (
           <HistoryHorizontalRow
             key={i}

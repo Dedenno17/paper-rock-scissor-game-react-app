@@ -23,16 +23,16 @@ const HistoryHorizontalRow = (props) => {
   }
 
   return (
-    <div className="h-full w-16 flex flex-col justify-between bg-secondaryPurple border-r-[1px] border-r-slate-800">
+    <span className="h-full w-16 inline-block bg-secondaryPurple border-r-[1px] border-r-slate-800">
       <div
-        className={`w-full h-[49%] flex ${
+        className={`w-full h-[50%] flex mb-[1px] ${
           props.result.includes("Player") ? "bg-green-400" : "bg-slate-200"
         }`}
       >
         <img src={pImage} alt={props.playerChoice} className="w-[40%] m-auto" />
       </div>
       <div
-        className={`w-full h-[49%] flex ${
+        className={`w-full h-[50%] flex ${
           props.result.includes("Computer") ? "bg-green-400" : "bg-slate-200"
         }`}
       >
@@ -42,7 +42,7 @@ const HistoryHorizontalRow = (props) => {
           className="w-[40%] m-auto"
         />
       </div>
-    </div>
+    </span>
   );
 };
 
