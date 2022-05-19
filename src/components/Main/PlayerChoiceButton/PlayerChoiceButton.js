@@ -18,12 +18,9 @@ const PlayerChoiceButton = (props) => {
 
     const timeout = setTimeout(() => {
       dispatch(randomImgTimeActions.setRandomImgTime(false));
-      const secondTimeout = setTimeout(() => {
-        dispatch(chooseActions.toggle());
-        dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
-        dispatch(compChoicesActions.setCompChoices());
-        clearTimeout(secondTimeout);
-      }, 200);
+      dispatch(chooseActions.toggle());
+      dispatch(playerChoicesActions.setPlayerChoices(pChoices.toLowerCase()));
+      dispatch(compChoicesActions.setCompChoices());
       clearTimeout(timeout);
     }, 1500);
   };

@@ -13,7 +13,7 @@ const ModalBackground = (props) => {
 
   return (
     <div
-      className="bg-gradient-to-b from-slate-800 to-transparent fixed top-0 bottom-0 left-0 right-0"
+      className="bg-gradient-to-b from-slate-800 to-transparent fixed top-0 bottom-0 left-0 right-0 z-10"
       onClick={hideModalNavbarHandler}
     ></div>
   );

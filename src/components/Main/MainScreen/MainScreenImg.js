@@ -30,13 +30,12 @@ const MainScreenImg = (props) => {
         })
       );
       dispatch(chooseActions.toggle());
-      console.log([playerChoices, compChoices, "hello from mainIMg"]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerChoices, compChoices, wasChoose, dispatch]);
 
   return (
-    <div className="flex w-full items-center justify-around h-40">
+    <div className="flex w-full items-center justify-around h-40 md:h-[200px]">
       <img
         src={playerChoicesImg}
         alt="Player choice"
