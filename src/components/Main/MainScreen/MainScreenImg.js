@@ -30,6 +30,7 @@ const MainScreenImg = (props) => {
         })
       );
       dispatch(chooseActions.toggle());
+      console.log([playerChoices, compChoices, "hello from mainIMg"]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerChoices, compChoices, wasChoose, dispatch]);

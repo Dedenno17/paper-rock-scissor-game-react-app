@@ -37,8 +37,6 @@ const Scores = (props) => {
           result: result,
         })
       );
-
-      console.log("hello from scores");
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

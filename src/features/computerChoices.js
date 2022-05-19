@@ -14,7 +14,7 @@ export const computerChoicesSlice = createSlice({
   initialState: initialStateValue,
   reducers: {
     setCompChoices: (state) => {
-      const random = Math.round(Math.random() * (6 - 1));
+      const random = Math.round(Math.random() * (6 - 1) + 1);
       if (random >= 1 && random < 3) {
         state.choices = "paper";
         state.img = images[state.choices];
