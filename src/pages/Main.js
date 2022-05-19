@@ -6,11 +6,14 @@ import PlayerChoiceButton from "../components/Main/PlayerChoiceButton/PlayerChoi
 import Scores from "../components/Main/Scores/Scores";
 import History from "../components/Main/History/History";
 import HistoryHorizontal from "../components/Main/History/HistoryHorizontal";
+import ModalHelp from "../components/Help/ModalHelp";
 
 const Main = (props) => {
   const isShowModalNavbar = useSelector(
     (state) => state.showModalNavbar.isShow
   );
+
+  const isShowModalHelp = useSelector((state) => state.showModalHelp.isShow);
 
   return (
     <div className="w-full bg-primaryPurple lg:pb-5 lg:bg-gradient-to-b lg:from-primaryPurple lg:to-secondaryPurple">
@@ -23,6 +26,7 @@ const Main = (props) => {
       <History />
       <HistoryHorizontal />
       {isShowModalNavbar && <ModalNavbar />}
+      {isShowModalHelp && <ModalHelp />}
     </div>
   );
 };

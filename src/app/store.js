@@ -10,6 +10,7 @@ import resultReducer from "../features/result";
 import wasChooseReducer from "../features/wasChoose";
 import randomImgTimeReducer from "../features/randomImgTime";
 import historyReducer from "../features/history";
+import showModalHelpReducer from "../features/showModalHelp";
 
 export const store = configureStore({
   reducer: {
@@ -20,6 +21,7 @@ export const store = configureStore({
     playerScore: playerScoreReducer,
     randomImgTime: randomImgTimeReducer,
     result: resultReducer,
+    showModalHelp: showModalHelpReducer,
     showModalNavbar: showModalNavbarReducer,
     wasChoose: wasChooseReducer,
   },

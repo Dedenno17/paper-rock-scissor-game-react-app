@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { showModalHelpActions } from "../../../features/showModalHelp";
 import { showModalNavbarActions } from "../../../features/showModalNavbar";
 import ModalCard from "../../UI/ModalCard";
 
@@ -6,6 +7,11 @@ const ModalNavbar = (props) => {
   const dispatch = useDispatch();
 
   const hideModalNavbarHandler = () => {
+    dispatch(showModalNavbarActions.setIsShowModalNavbar(false));
+  };
+
+  const showModalHelpHandler = () => {
+    dispatch(showModalHelpActions.setIsShowModalHelp(true));
     dispatch(showModalNavbarActions.setIsShowModalNavbar(false));
   };
 
@@ -17,7 +23,10 @@ const ModalNavbar = (props) => {
       >
         X
       </span>
-      <button className="w-full border-b-[1px] border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
+      <button
+        className="w-full border-b-[1px] border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer"
+        onClick={showModalHelpHandler}
+      >
         Help
       </button>
       <button className="w-full border-b-[1px] border-b-secondaryPurple py-3 text-lg text-slate-700 font-semibold outline-none cursor-pointer">
