@@ -12,15 +12,24 @@ const Navbar = (props) => {
             src={help}
             alt="exclamation mark"
             className="w-6 h-6 to-bleach"
+            onClick={props.onShowModalHelp}
           />
         </li>
         <li className="inline-block text-2xl font-semibold text-slate-200 mr-8 cursor-pointer hover:text-slate-400">
-          <img src={reset} alt="rotate arrow" className="w-6 h-6 to-bleach" />
+          <img
+            src={reset}
+            alt="rotate arrow"
+            className="w-6 h-6 to-bleach"
+            onClick={props.onReset}
+          />
         </li>
         <li className="inline-block text-2xl font-semibold text-slate-200 mr-8 hover:text-slate-400">
-          <a href="/">
-            <img src={quit} alt="door" className="w-6 h-6 to-bleach" />
-          </a>
+          <img
+            src={quit}
+            alt="door"
+            className="w-6 h-6 to-bleach"
+            onClick={props.onQuit}
+          />
         </li>
       </ul>
       <NavbarHamburger />
