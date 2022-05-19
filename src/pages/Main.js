@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import MainScreen from "../components/Main/MainScreen/MainScreen";
 import ModalNavbar from "../components/Main/Navbar/ModalNavbar";
@@ -19,6 +20,7 @@ import { showModalNavbarActions } from "../features/showModalNavbar";
 
 const Main = (props) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const isShowModalNavbar = useSelector(
     (state) => state.showModalNavbar.isShow
@@ -43,6 +45,7 @@ const Main = (props) => {
 
   const quitHandler = () => {
     resetHandler();
+    navigate("/opening");
   };
 
   return (

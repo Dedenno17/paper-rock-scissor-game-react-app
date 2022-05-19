@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import openingImg from "../assets/images/openingImg.png";
 
 const Opening = (props) => {
@@ -11,12 +13,12 @@ const Opening = (props) => {
         alt="three hands"
         className="md:order-3 md:w-[90%]"
       />
-      <a
-        href="/"
+      <Link
+        to="/main"
         className="block py-5 px-10 bg-ternaryPurple text-slate-200 font-bold text-xl rounded-xl shadow-xl md:order-2"
       >
         New Game
-      </a>
+      </Link>
     </div>
   );
 };
