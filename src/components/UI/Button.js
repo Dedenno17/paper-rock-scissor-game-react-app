@@ -3,7 +3,7 @@ const Button = (props) => {
     <button
       onClick={props.onClick}
       type={props.type}
-      className="px-6 py-4 bg-ternaryPurple rounded-lg shadow-xl text-md text-slate-200 font-bold hover:brightness-90 lg:px-12 lg:text-2xl"
+      className="px-6 py-4 bg-ternaryPurple rounded-lg shadow-xl text-md text-slate-200 font-bold hover:brightness-90 lg:px-12 lg:text-xl"
     >
       {props.children}
     </button>

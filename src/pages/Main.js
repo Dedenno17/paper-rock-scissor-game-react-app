@@ -5,6 +5,7 @@ import Navbar from "../components/Main/Navbar/Navbar";
 import PlayerChoiceButton from "../components/Main/PlayerChoiceButton/PlayerChoiceButton";
 import Scores from "../components/Main/Scores/Scores";
 import History from "../components/Main/History/History";
+import HistoryHorizontal from "../components/Main/History/HistoryHorizontal";
 
 const Main = (props) => {
   const isShowModalNavbar = useSelector(
@@ -20,6 +21,7 @@ const Main = (props) => {
         <MainScreen />
       </main>
       <History />
+      <HistoryHorizontal />
       {isShowModalNavbar && <ModalNavbar />}
     </div>
   );
