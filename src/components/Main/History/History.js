@@ -5,7 +5,7 @@ const History = (props) => {
   const history = useSelector((state) => state.history.history);
 
   return (
-    <div className="w-full bg-slate-200 px-4">
+    <div className="w-full bg-slate-200 px-4 lg:hidden">
       <table className="m-auto w-full text-sm">
         <thead>
           <tr>
