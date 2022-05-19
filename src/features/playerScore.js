@@ -9,6 +9,9 @@ export const playerScoreSlice = createSlice({
     increaseScore: (state) => {
       state.score += 1;
     },
+    resetScore: (state) => {
+      state.score = initialStateValue.score;
+    },
   },
 });
 

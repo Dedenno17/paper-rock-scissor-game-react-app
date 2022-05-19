@@ -17,6 +17,9 @@ export const historySlice = createSlice({
 
       state.history = newHistory;
     },
+    resetHistory: (state) => {
+      state.history = initialStateValue.history;
+    },
   },
 });
 

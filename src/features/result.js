@@ -31,6 +31,9 @@ export const resultSlice = createSlice({
         }
       }
     },
+    resetResult: (state) => {
+      state.result = initialStateValue.result;
+    },
   },
 });
 
